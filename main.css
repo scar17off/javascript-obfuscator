@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+#editor {
+    flex: 1;
+    padding: 20px;
+}
+#textarea {
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+    border: none;
+    padding: 10px;
+    font-family: monospace;
+    resize: none;
+}
+#sidebar {
+    width: 300px;
+    height: 100vh;
+    padding: 20px;
+    background-color: #252526;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #0e639c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #1177bb;
+}
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #4ec9b0;
+}
+.setting {
+    margin-bottom: 15px;
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    min-height: 25px;
+}
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 4px;
+    transform: translateY(-50%);
+}
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: #3c3c3c;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    border-radius: 4px;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+}

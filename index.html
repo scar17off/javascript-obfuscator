@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Obfuscator</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="editor">
+        <textarea id="textarea" placeholder="Enter your code here..."></textarea>
+    </div>
+    <div id="sidebar">
+        <button id="obfuscateBtn">Obfuscate</button>
+        <h3>Basic Obfuscation</h3>
+        <div class="setting">
+            <label class="checkbox-container" title="Rename all variables to shorter names to make the code harder to understand.">
+                <input type="checkbox" id="renameVariables" checked>
+                <span class="checkmark"></span>
+                Rename Variables
+            </label>
+        </div>
+        <div class="setting">
+            <label class="checkbox-container" title="Encrypt all string literals to make them unreadable.">
+                <input type="checkbox" id="stringEncryption" checked>
+                <span class="checkmark"></span>
+                String Encryption
+            </label>
+        </div>
+        <h3>Control Flow Obfuscation</h3>
+        <div class="setting">
+            <label class="checkbox-container" title="Flatten the control flow to make the code structure more complex.">
+                <input type="checkbox" id="controlFlowFlattening">
+                <span class="checkmark"></span>
+                Control Flow Flattening
+            </label>
+        </div>
+        <div class="setting">
+            <label class="checkbox-container" title="Randomly reorder functions to make the code flow less predictable.">
+                <input type="checkbox" id="functionReordering">
+                <span class="checkmark"></span>
+                Function Reordering
+            </label>
+        </div>
+        <h3>Code Injection</h3>
+        <div class="setting">
+            <label class="checkbox-container" title="Inject dead code that will never execute to confuse reverse engineers.">
+                <input type="checkbox" id="deadCodeInjection">
+                <span class="checkmark"></span>
+                Dead Code Injection
+            </label>
+        </div>
+        <h3>Anti-Debugging</h3>
+        <div class="setting">
+            <label class="checkbox-container" title="Add protection against debugging tools.">
+                <input type="checkbox" id="debugProtection">
+                <span class="checkmark"></span>
+                Debug Protection
+            </label>
+        </div>
+        <h3>Code Transformation</h3>
+        <div class="setting">
+            <label class="checkbox-container" title="Fold constant expressions to their computed values.">
+                <input type="checkbox" id="constantFolding">
+                <span class="checkmark"></span>
+                Constant Folding
+            </label>
+        </div>
+        <div class="setting">
+            <label class="checkbox-container" title="Split the code into smaller parts and shuffle them.">
+                <input type="checkbox" id="codeSplitting">
+                <span class="checkmark"></span>
+                Code Splitting
+            </label>
+        </div>
+        <h3>String Transformation</h3>
+        <div class="setting">
+            <label class="checkbox-container" title="Convert strings to array elements">
+                <input type="checkbox" id="stringArray">
+                <span class="checkmark"></span>
+                String Array
+            </label>
+        </div>
+        <div class="setting">
+            <label class="checkbox-container" title="Shuffle the string array">
+                <input type="checkbox" id="stringArrayShuffle">
+                <span class="checkmark"></span>
+                String Array Shuffle
+            </label>
+        </div>
+        <div class="setting">
+            <label title="Minimum string length to be transformed">
+                String Array Threshold
+                <input type="number" id="stringArrayThreshold" min="0" value="0">
+            </label>
+        </div>
+        <div class="setting">
+            <label title="Shift string array indexes">
+                String Array Index Shift
+                <input type="number" id="stringArrayIndexShift" value="0">
+            </label>
+        </div>
+        <div class="setting">
+            <label title="Type of string array indexes">
+                String Array Indexes Type
+                <select id="stringArrayIndexesType">
+                    <option value="number">Number</option>
+                    <option value="hexadecimal">Hexadecimal Number</option>
+                </select>
+            </label>
+        </div>
+        <div class="setting">
+            <label class="checkbox-container" title="Use insane string transformation">
+                <input type="checkbox" id="stringInsane">
+                <span class="checkmark"></span>
+                String Insane
+            </label>
+        </div>
+        <div class="setting">
+            <label title="Maximum characters per chunk for insane string transformation">
+                String Insane Threshold
+                <input type="number" id="stringInsaneThreshold" min="1" value="2">
+            </label>
+        </div>
+    </div>
+    <script src="obfuscator.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
